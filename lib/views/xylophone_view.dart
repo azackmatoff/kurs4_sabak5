@@ -1,14 +1,16 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:kurs4_sabak5/app_constants/colors/app_colors.dart';
+import 'package:kurs4_sabak5/widgets/custom_container.dart';
 
-class XylophonePage extends StatefulWidget {
-  const XylophonePage({Key key}) : super(key: key);
+class XylophoneView extends StatefulWidget {
+  const XylophoneView({Key key}) : super(key: key);
 
   @override
-  _XylophonePageState createState() => _XylophonePageState();
+  _XylophoneViewState createState() => _XylophoneViewState();
 }
 
-class _XylophonePageState extends State<XylophonePage> {
+class _XylophoneViewState extends State<XylophoneView> {
   AudioCache player = AudioCache();
 
   @override
@@ -18,36 +20,34 @@ class _XylophonePageState extends State<XylophonePage> {
       body: SafeArea(
         child: Center(
           child: Column(
-            children: [
-              buildContainer(
-                color: Colors.redAccent,
-                notaNomeri: '1',
+            children: const [
+              CustomContainer(
+                color: AppColors.red,
+                noteNumber: '1',
               ),
-              buildContainer(
-                color: Colors.orangeAccent,
-                notaNomeri: '2',
+              CustomContainer(
+                color: AppColors.yellow,
+                noteNumber: '2',
               ),
-              buildContainer(
-                color: Colors.yellowAccent,
-                notaNomeri: '3',
+              CustomContainer(
+                color: AppColors.orange,
+                noteNumber: '3',
               ),
-              buildContainer(
-                color: const Color(0xff49A84F),
-                notaNomeri: '4',
+              CustomContainer(
+                color: AppColors.greenLight,
+                noteNumber: '4',
               ),
-              buildContainer(
-                color: const Color(0xff2C9083),
-                notaNomeri: '5',
+              CustomContainer(
+                color: AppColors.greenDark,
+                noteNumber: '5',
               ),
-              buildContainer(
-                color: const Color(0xff2790EA),
-                notaNomeri: '6',
-                keleTurchuSplashColor: Colors.deepPurple,
+              CustomContainer(
+                color: AppColors.blue,
+                noteNumber: '6',
               ),
-              buildContainer(
-                color: const Color(0xff9B27B1),
-                notaNomeri: '7',
-                keleTurchuSplashColor: Colors.cyanAccent,
+              CustomContainer(
+                color: AppColors.pinkDark,
+                noteNumber: '7',
               ),
 
               // /// Aty joktor
